@@ -122,19 +122,14 @@ display: inline-block;
 .link-contact {
     display: inline-flex;
     align-items: center;
+    fill: currentColor;
 }
 
 
-.email-icon {
-    fill: currentColor;
+.icon-contact {
     margin-right: 10px;
 }
 
-.smartphone-icon {
-    fill: currentColor;
-    margin-right: 10px;
-   
-}
 
 /* Hero styling */
 h1 {
@@ -249,7 +244,6 @@ button {
     font-size: 14px; 
     margin-top: 0;
     margin-bottom: 10px;
-    padding-top: 30px;
     /* иначе стили браузера переопределяют заданную в body величину шрифта*/
     font-weight: bold;
     text-transform: uppercase;
@@ -258,10 +252,13 @@ button {
 
 
 .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--secondary-bg-color);
     width: 270px;
     height: 120px;
-    padding: 25px 100px;
+    margin-bottom: 30px;
 }
 
 
@@ -273,17 +270,16 @@ button {
 
 .team-member {
     width: 270px;
-    /* height: 368px; */
     background:var(--primaty-wite-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
+    font-size: 0;
+    
 }
 
 .team-member>.wrapper{
-    padding-top: 30px ;
-    padding-bottom: 30px;
-    align-items: center;
+    padding: 30px 32px;
 }
 
 .member-name {
@@ -292,6 +288,7 @@ button {
     color: var(--title-text-color);
     margin-top: 0;
     margin-bottom: 10px;
+    display: block;
 }
 
 .team-member p {
@@ -340,13 +337,16 @@ footer .contact-details {
     margin-bottom: 10px;
 }
 
+.contact-details__footer>.item:hover,
+.contact-details__footer>.item:focus {
+    color: var(--primaty-wite-color);
+}
+
 footer h3 {
     font-size: 14px;
     line-height: 16px;
     color: var(--primaty-wite-color);
-    margin-bottom: 0;
-    margin-bottom: 20px;
-    
+    vertical-align: baseline;
 }
 
 /* portfolio */
@@ -479,47 +479,52 @@ footer h3 {
     justify-content: center;
 }
 
+.list-media>.item:not(:last-child){
+    margin-right: 10px;
+}
+
+
 .link-media {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    fill: currentColor;
     width: 44px;
     height: 44px;
-    margin-right: 10px;
+
     color: var(--icon-main-color);
    
-}
-
-.link-media:not(:last-child){
-    margin-right: 10px;
 }
 
 .link-media:hover {
     background-color: var(--akcent-color);
     border-radius: 50%;
     color: var(--primaty-wite-color);
+    cursor: pointer;
 }
 
 .icon-media {
     width: 20px;
     height: 20px;
-    fill: currentColor;
+    
 }
 
 .footer-media {
     display: flex;
 }
 
-.footer-media .link-media {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
+.footer-media>.item:not(:last-child) {
     margin-right: 10px;
 }
 
-.footer-media .icon-media {
-    fill: var(--primaty-wite-color);
+.footer-media .link-media {
+    color: var(--primaty-wite-color);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
 }
+
+
 
 .footer-media .link-media:hover {
     background-color: var(--akcent-color);
@@ -542,10 +547,12 @@ footer h3 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    
 
     height: 90px;
     width: 170px;
 
+    fill: currentColor;
     color: var(--icon-main-color);
     border: 1px solid var(--icon-main-color);
     border-radius: 4px;
@@ -554,9 +561,6 @@ footer h3 {
 .link-client:hover {
     color: var(--akcent-color);
     border: 1px solid var(--akcent-color);
-}
-
-.logo-client {
-    fill: currentColor;
+    cursor: pointer;
 }
 

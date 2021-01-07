@@ -301,6 +301,7 @@ button {
 /* footer styling  */
 .page-footer {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-wrapper {
@@ -309,7 +310,7 @@ button {
 
 footer {
     background-color: var(--hero-footer-bg-color);
-    padding: 60px 15px;
+    padding: 60px 0;
 } 
 
 
@@ -339,14 +340,19 @@ footer .contact-details {
 
 .contact-details__footer>.item:hover,
 .contact-details__footer>.item:focus {
-    color: var(--primaty-wite-color);
+    color: var(--akcent-color);
+    border: none;
 }
 
 footer h3 {
     font-size: 14px;
     line-height: 16px;
     color: var(--primaty-wite-color);
-    vertical-align: baseline;
+    text-transform: uppercase;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+    
 }
 
 /* portfolio */
@@ -543,14 +549,19 @@ footer h3 {
     justify-content: space-between;
 }
 
+.list-clients >.item{
+height: 90px;
+width: 170px;
+}
+
 .link-client{
     display: inline-flex;
     justify-content: center;
     align-items: center;
     
-
-    height: 90px;
-    width: 170px;
+    height: 100%;
+    width: 100%;
+    
 
     fill: currentColor;
     color: var(--icon-main-color);

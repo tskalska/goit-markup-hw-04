@@ -133,7 +133,6 @@ display: inline-block;
 
 /* Hero styling */
 h1 {
-
     margin-top: 0;
     margin-bottom: 30px;
 
@@ -329,7 +328,7 @@ address {
     margin-bottom: 9px;   
 }
 
-footer .contact-details {
+.contact-details__footer {
     display: flex;
     flex-direction: column;
 }
@@ -338,11 +337,11 @@ footer .contact-details {
     margin-bottom: 10px;
 }
 
-.contact-details__footer>.item:hover,
-.contact-details__footer>.item:focus {
+.contact-details__footer a:hover,
+.contact-details__footer a:focus {
     color: var(--akcent-color);
-    border: none;
 }
+
 
 footer h3 {
     font-size: 14px;
@@ -363,7 +362,7 @@ footer h3 {
 
 .main-title_portfolio {
     visibility: hidden;
-      position: absolute;
+    position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
@@ -502,7 +501,8 @@ footer h3 {
    
 }
 
-.link-media:hover {
+.link-media:hover,
+.link-media:focus {
     background-color: var(--akcent-color);
     border-radius: 50%;
     color: var(--primaty-wite-color);
@@ -523,7 +523,7 @@ footer h3 {
     margin-right: 10px;
 }
 
-.footer-media .link-media {
+.footer-media .link-media{
     color: var(--primaty-wite-color);
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
@@ -532,7 +532,8 @@ footer h3 {
 
 
 
-.footer-media .link-media:hover {
+.footer-media .link-media:hover,
+.footer-media .link-media:focus {
     background-color: var(--akcent-color);
     border-radius: 50%;
 }
@@ -562,14 +563,14 @@ width: 170px;
     height: 100%;
     width: 100%;
     
-
     fill: currentColor;
     color: var(--icon-main-color);
     border: 1px solid var(--icon-main-color);
     border-radius: 4px;
 }
 
-.link-client:hover {
+.link-client:hover,
+.link-client:focus {
     color: var(--akcent-color);
     border: 1px solid var(--akcent-color);
     cursor: pointer;
